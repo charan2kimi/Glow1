@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/My_schema</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <mapping class="com.charan.Business.Enterprise"/>
+        <mapping class="com.charan.Business.Person"/>
+        <mapping class="com.charan.Business.UserAccount"/>
+        <mapping class="com.charan.Business.Location"/>
+        <mapping class="com.charan.Business.Patient"/>
+        <mapping class="com.charan.Business.Employee"/>
+        <mapping class="com.charan.Business.Drug"/>
+        <mapping class="com.charan.Business.DrugPackage"/>
+        <mapping class="com.charan.Business.WorkRequest"/>
+        <mapping class="com.charan.Business.PackageHistory"/>
+        <mapping class="com.charan.Business.PackageTransaction"/>
+        <mapping class="com.charan.Business.Alert"/>
+        <mapping class="com.charan.Business.DrugOrder"/>
+        <mapping class="com.charan.Business.OrderItem"/>
+        <mapping class="com.charan.Business.PurchaseOrderRequest"/>
+        <mapping class="com.charan.Business.ShippingRequest"/>
+    </session-factory>
+</hibernate-configuration>

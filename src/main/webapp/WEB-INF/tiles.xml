@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="base.definition"
+        template="/WEB-INF/tiles/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="body" value="" />
+       
+    </definition>
+    
+    <definition name="base.definition.login" extends="base.definition"
+        template="/WEB-INF/tiles/layout-login.jsp">
+    </definition>
+ 
+    <definition name="login" extends="base.definition.login">
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="body" value="/WEB-INF/views/login1.jsp" />
+    </definition>
+    
+      <definition name="admin_home" extends="base.definition">
+        <put-attribute name="title" value="Home" />
+        <put-attribute name="menu" value="/WEB-INF/views/admin/admin_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/admin_home.jsp" />
+    </definition>
+    <definition name="admin_enterprise" extends="base.definition">
+        <put-attribute name="title" value="Create Enterprise" />
+        <put-attribute name="menu" value="/WEB-INF/views/admin/admin_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/admin_enterprise.jsp" />
+    </definition>
+    <definition name="admin_employee" extends="base.definition">
+        <put-attribute name="title" value="Create Employee" />
+        <put-attribute name="menu" value="/WEB-INF/views/admin/admin_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/admin_employee.jsp" />
+    </definition>
+    <definition name="admin_user" extends="base.definition">
+        <put-attribute name="title" value="Create User Account" />
+        <put-attribute name="menu" value="/WEB-INF/views/admin/admin_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/admin_user.jsp" />
+    </definition>
+    <definition name="admin_patient" extends="base.definition">
+        <put-attribute name="title" value="Create Patient" />
+        <put-attribute name="menu" value="/WEB-INF/views/admin/admin_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/admin_patient.jsp" />
+    </definition>
+    <definition name="admin_list" extends="base.definition">
+        <put-attribute name="title" value="Manage Entities" />
+        <put-attribute name="menu" value="/WEB-INF/views/admin/admin_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/admin_list.jsp" />
+    </definition>
+     <definition name="manufacturer_drug" extends="base.definition">
+        <put-attribute name="title" value="Create Drug" />
+        <put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturer_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/manufacturer/manufacturer_drug.jsp" />
+    </definition>
+     <definition name="manufacturer_catalog" extends="base.definition">
+        <put-attribute name="title" value="View Drugs" />
+        <put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturer_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/manufacturer/manufacturer_catalog.jsp" />
+    </definition>
+    <definition name="manufacturer_home" extends="base.definition">
+        <put-attribute name="title" value="Manufacturer Home" />
+        <put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturer_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/manufacturer/manufacturer_home.jsp" />
+    </definition>
+    <definition name="manufacturer_queue" extends="base.definition">
+        <put-attribute name="title" value="Manufacturer Queue" />
+        <put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturer_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/manufacturer/manufacturer_queue.jsp" />
+    </definition>
+    
+    <definition name="distributor_home" extends="base.definition">
+        <put-attribute name="title" value="Distributor Home" />
+        <put-attribute name="menu" value="/WEB-INF/views/distributor/distributor_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/distributor/distributor_home.jsp" />
+    </definition>
+    <definition name="distributor_order" extends="base.definition">
+        <put-attribute name="title" value="Distributor Order" />
+        <put-attribute name="menu" value="/WEB-INF/views/distributor/distributor_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/distributor/distributor_order.jsp" />
+    </definition>
+     <definition name="distributor_shippingqueue" extends="base.definition">
+        <put-attribute name="title" value="Distributor Shipping Request Queue" />
+        <put-attribute name="menu" value="/WEB-INF/views/distributor/distributor_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/distributor/distributor_shippingqueue.jsp" />
+    </definition>
+    <definition name="distributor_purchasequeue" extends="base.definition">
+        <put-attribute name="title" value="Distributor Purchase Request Queue" />
+        <put-attribute name="menu" value="/WEB-INF/views/distributor/distributor_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/distributor/distributor_purchasequeue.jsp" />
+    </definition>
+    <definition name="distributor_inventory" extends="base.definition">
+        <put-attribute name="title" value="Distributor Order" />
+        <put-attribute name="menu" value="/WEB-INF/views/distributor/distributor_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/distributor/distributor_inventory.jsp" />
+    </definition>
+    
+    <definition name="hospital_home" extends="base.definition">
+        <put-attribute name="title" value="Hospital Home" />
+        <put-attribute name="menu" value="/WEB-INF/views/hospital/hospital_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/hospital/hospital_home.jsp" />
+    </definition>
+    <definition name="hospital_order" extends="base.definition">
+        <put-attribute name="title" value="Hospital Order" />
+        <put-attribute name="menu" value="/WEB-INF/views/hospital/hospital_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/hospital/hospital_order.jsp" />
+    </definition>
+     <definition name="hospital_shippingqueue" extends="base.definition">
+        <put-attribute name="title" value="Hospital Shipping Request Queue" />
+        <put-attribute name="menu" value="/WEB-INF/views/hospital/hospital_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/hospital/hospital_shippingqueue.jsp" />
+    </definition>
+    <definition name="hospital_purchasequeue" extends="base.definition">
+        <put-attribute name="title" value="Hospital Purchase Request Queue" />
+        <put-attribute name="menu" value="/WEB-INF/views/hospital/hospital_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/hospital/hospital_purchasequeue.jsp" />
+    </definition>
+    <definition name="hospital_inventory" extends="base.definition">
+        <put-attribute name="title" value="Hospital Order" />
+        <put-attribute name="menu" value="/WEB-INF/views/hospital/hospital_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/hospital/hospital_inventory.jsp" />
+    </definition>
+	<definition name="patient_home" extends="base.definition">
+        <put-attribute name="title" value="Patient Home" />
+        <put-attribute name="menu" value="/WEB-INF/views/patient/patient_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/patient/patient_home.jsp" />
+    </definition>
+    <definition name="patient_order" extends="base.definition">
+        <put-attribute name="title" value="Patient Order" />
+        <put-attribute name="menu" value="/WEB-INF/views/patient/patient_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/patient/patient_order.jsp" />
+    </definition>
+     <definition name="patient_shippingqueue" extends="base.definition">
+        <put-attribute name="title" value="Patient Received Queue" />
+        <put-attribute name="menu" value="/WEB-INF/views/patient/patient_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/patient/patient_shippingqueue.jsp" />
+    </definition>
+    
+    <definition name="patient_inventory" extends="base.definition">
+        <put-attribute name="title" value="Patient Order" />
+        <put-attribute name="menu" value="/WEB-INF/views/patient/patient_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/patient/patient_inventory.jsp" />
+    </definition>
+    
+    <definition name="fda_home" extends="base.definition">
+        <put-attribute name="title" value="FDA Home" />
+        <put-attribute name="menu" value="/WEB-INF/views/fda/fda_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/fda/fda_home.jsp" />
+    </definition>
+    <definition name="fda_reports" extends="base.definition">
+        <put-attribute name="title" value="FDA Reports" />
+        <put-attribute name="menu" value="/WEB-INF/views/fda/fda_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/fda/fda_reports.jsp" />
+    </definition>
+    
+    
+    <definition name="fda_revoke" extends="base.definition">
+        <put-attribute name="title" value="FDA Revoke License" />
+        <put-attribute name="menu" value="/WEB-INF/views/fda/fda_menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/fda/fda_revoke.jsp" />
+    </definition>    
+</tiles-definitions>
