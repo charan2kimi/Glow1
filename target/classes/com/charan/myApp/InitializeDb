@@ -1,0 +1,119 @@
+Location l1=new Location();
+		l1.setLine1("l1");
+		l1.setLine2("l1");
+		l1.setCity("l1");
+		l1.setState("l1");
+		l1.setZip("l1");
+		
+		
+	
+		Enterprise enterprise1=new Enterprise();
+		enterprise1.setEnterpriseName("Business");
+		//enterprise1.setLocation(l1);
+		enterprise1.setType("Business");
+		enterpriseDAO.persist(enterprise1);
+		
+		Enterprise enterprise2=new Enterprise();
+		enterprise2.setEnterpriseName("m1");
+		//enterprise2.setLocation(l1);
+		enterprise2.setType("Manufacturer");
+		enterpriseDAO.persist(enterprise2);
+		
+		Enterprise enterprise3=new Enterprise();
+		enterprise3.setEnterpriseName("m2");
+		//enterprise3.setLocation(l1);
+		enterprise3.setType("Manufacturer");
+		enterpriseDAO.persist(enterprise3);
+		
+		Enterprise enterprise4=new Enterprise();
+		//enterprise4.setLocation(l1);
+		enterprise4.setEnterpriseName("d1");
+		enterprise4.setType("Distributor");
+		enterpriseDAO.persist(enterprise4);
+		
+		Enterprise enterprise5=new Enterprise();
+		enterprise5.setEnterpriseName("d2");
+		//enterprise5.setLocation(l1);
+		enterprise5.setType("Distributor");
+		enterpriseDAO.persist(enterprise5);
+		
+		Employee emp1=new Employee();
+		emp1.setfName("admin");
+		emp1.setlName("admin");
+		
+	//	emp1.setLocation(l1);
+		
+		emp1.setEnterprise(enterprise1);
+		employeeDAO.persist(emp1);
+
+		
+		Employee emp2=new Employee();
+		emp2.setfName("m1");
+		emp2.setlName("m1");
+		
+		//emp2.setLocation(l1);
+		
+		emp2.setEnterprise(enterprise2);
+		employeeDAO.persist(emp2);
+		
+
+		Employee emp3=new Employee();
+		emp3.setfName("m2");
+		emp3.setlName("m2");
+		
+		//emp3.setLocation(l1);
+		
+		emp3.setEnterprise(enterprise3);
+		employeeDAO.persist(emp3);
+		
+		Employee emp4=new Employee();
+		emp4.setfName("d1");
+		emp4.setlName("d1");
+		
+		//emp4.setLocation(l1);
+		
+		emp4.setEnterprise(enterprise4);
+		employeeDAO.persist(emp4);
+		
+		Employee emp5=new Employee();
+		emp5.setfName("d2");
+		emp5.setlName("d2");
+		
+		//emp5.setLocation(l1);
+		
+		emp5.setEnterprise(enterprise5);
+		employeeDAO.persist(emp5);
+		
+		UserAccount ua1=new UserAccount();
+		ua1.setUsername("admin");
+		ua1.setPassword("admin");
+		ua1.setRole("Admin");
+		ua1.setEnterprise(enterprise1);
+		Person person1=personDAO.findPersonById(emp1.getId());
+		ua1.setPerson(person1);
+		
+		userAccountDAO.persist(ua1);
+		DrugOrder o=new DrugOrder();
+		drugOrderDAO.persist(o);
+		
+		Enterprise fda=new Enterprise();
+		fda.setEnterpriseName("FDA");
+		fda.setType("FDA");
+		enterpriseDAO.persist(fda);
+		
+		Employee fdaemp=new Employee();
+		fdaemp.setfName("fda");
+		fdaemp.setfName("fda");
+		fdaemp.setEnterprise(fda);
+		employeeDAO.persist(fdaemp);
+		
+		Person fdp=personDAO.findPersonById(fdaemp.getId());
+		
+		UserAccount fdaua=new UserAccount();
+		fdaua.setUsername("f1");
+		fdaua.setPassword("f1");
+		fdaua.setEnterprise(fda);
+		fdaua.setPerson(fdp);
+		fdaua.setRole("FDA");
+		
+		userAccountDAO.persist(fdaua);
